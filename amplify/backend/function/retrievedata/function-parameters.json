@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "auth": {
+      "softaimsnotes": [
+        "read"
+      ]
+    },
+    "api": {
+      "softaimsnotes": [
+        "Query"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -1,0 +1,10 @@
+type Notes @model @auth(rules: [{allow: private}, {allow: owner}, {allow: private, provider: iam}, {allow: public, operations: [read]}]) {
+  id: ID!
+  title: String
+  Content: String
+}
+
+
+type Query {
+  listAllNotes: String @function(name: "retrievedata-${env}")
+}

@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-softaimsnotes-staging-102712-authRole",
+      "UnauthRoleArn": "arn:aws:iam::804662387333:role/amplify-softaimsnotes-staging-102712-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::804662387333:role/amplify-softaimsnotes-staging-102712-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-softaimsnotes-staging-102712-deployment",
+      "UnauthRoleName": "amplify-softaimsnotes-staging-102712-unauthRole",
+      "StackName": "amplify-softaimsnotes-staging-102712",
+      "StackId": "arn:aws:cloudformation:ap-south-1:804662387333:stack/amplify-softaimsnotes-staging-102712/482502d0-3fe1-11ed-ad27-02466646c9d0",
+      "AmplifyAppId": "d2wg74lophcpod"
+    },
+    "categories": {
+      "auth": {
+        "softaimsnotes": {}
+      },
+      "function": {
+        "retrievedata": {
+          "deploymentBucketName": "amplify-softaimsnotes-staging-102712-deployment",
+          "s3Key": "amplify-builds/retrievedata-64765654696a77732b68-build.zip"
+        }
+      }
+    }
+  }
+}
