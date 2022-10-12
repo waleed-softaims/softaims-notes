@@ -5,8 +5,7 @@ import { listAllNotes } from '../../src/graphql/queries'
 let data = null
 export default function handler(req, res) {
   listNotes()
-  if(data!=null)
-    res.status(200).json(data)
+  res.status(200).json(data)
 }
 async function listNotes() {
   await API.graphql({
@@ -16,7 +15,7 @@ async function listNotes() {
     data = (JSON.parse(JSON.parse(result.data.listAllNotes).body).data.listNotes.items)
     return data
   }).catch((error) => {
-    return "error (catch):\n\n"+JSON.stringify(error, " ", 4)
+    return error
   }).finally(() => {
   })
 }
