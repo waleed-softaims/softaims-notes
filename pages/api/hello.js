@@ -12,6 +12,7 @@ async function listNotes() {
     query: listAllNotes,
     authMode: "API_KEY"
   }).then(result => {
+    console.log(result)
     data = (JSON.parse(JSON.parse(result.data.listAllNotes).body).data.listNotes.items)
     return data
   }).catch((error) => {
