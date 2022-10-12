@@ -2,11 +2,11 @@
 import { API, Auth } from "aws-amplify"
 import { listAllNotes } from '../../src/graphql/queries'
 
-let data = []
+let data = null
 export default function handler(req, res) {
   listNotes()
-  console.log(data)
-  res.status(200).json(data)
+  if(data!=null)
+    res.status(200).json(data)
 }
 async function listNotes() {
   await API.graphql({

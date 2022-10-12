@@ -1,4 +1,4 @@
-# Command Hooks
+# Command   Hooks
 
 Command hooks can be used to run custom scripts upon Amplify CLI lifecycle events like pre-push, post-add-function, etc.
 
