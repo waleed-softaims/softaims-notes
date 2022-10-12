@@ -35,7 +35,20 @@ function Home({signOut,user}){
 
   const { data, error } = useSWR('/api/hello', fetcher);
   if (error) return <h1>Something went wrong!</h1>
-  if (!data) return <h1>Loading...</h1>
+  if (!data) return <>
+
+    <h1>Loading...</h1>
+    <h1>hello {user.username}</h1>
+    <button onClick={signOut}>Sign Out</button>
+    <form onSubmit={addNotes} method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" onChange={(event)=>setTitle(event.target.value)}/>
+      <label for="content">Content</label>
+      <input type="text" id="content" name="content" onChange={(event)=>setContent(event.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+    
+  </>
   const listItems = data.map(notes => {
     return (
 
